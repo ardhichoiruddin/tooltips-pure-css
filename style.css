@@ -1,0 +1,71 @@
+.tooltips {
+  margin-left: 9rem;
+  position: relative;
+}
+
+.tooltips a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 400;
+  background-color: #0352fc;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.tooltips a:after {
+  display: none;
+  content: attr(data-text);
+  position: absolute;
+  background-color: #1d1d1d;
+  color: #1d1d1d;
+  border: solid 1px #1d1d1d;
+  padding: 0.25rem 0.75rem;
+  min-width: 100px;
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  right: -140px;
+  top: -3px;
+  color: #fff;
+  -webkit-animation: show-animate 100ms ease;
+          animation: show-animate 100ms ease;
+}
+
+.tooltips a:before {
+  display: none;
+  position: absolute;
+  content: '';
+  right: -18px;
+  top: 2px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 15px solid #1d1d1d;
+  -webkit-animation: show-animate 100ms ease;
+          animation: show-animate 100ms ease;
+}
+
+.tooltips a:hover:after, .tooltips a:hover:before {
+  display: block;
+}
+
+@-webkit-keyframes show-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-animate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
